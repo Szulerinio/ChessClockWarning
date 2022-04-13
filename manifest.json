@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Chess.com clock warning",
+    "version":"0.1",
+    "content_scripts":[
+        {
+            "matches": ["*://*.chess.com/*"
+            ],
+            "css":[],
+            "js":["content.js"]
+        }
+    ]
+}
