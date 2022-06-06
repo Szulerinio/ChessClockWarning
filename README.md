@@ -1,4 +1,4 @@
-#ChessClockWarning
+# ChessClockWarning
 
 Chromium addon to chess.com that warns you when you have less time than your opponent by turning the background red.
 
