@@ -3,10 +3,8 @@ let timers = [];
 let playerLeads = true;
 let board = null;
 const getTimers = window.setInterval(() => {
-  //   timers = document.querySelectorAll(".move-time-content");
-  timers = document.querySelectorAll(".player-clock");
+  timers = document.querySelectorAll("span[data-cy=clock-time]");
   board = document.querySelector("#board-layout-main");
-  if (timers.length > 1) console.log(timers);
 }, 10000);
 
 const stripTimer = (value) => {
@@ -16,27 +14,19 @@ const stripTimer = (value) => {
 
 const notifySlower = window.setInterval(() => {
   if (timers.length > 1) {
-    // const newPlayerLeads =
-    //   stripTimer(timers[1].innerText) > stripTimer(timers[0].innerText);
-    console.log("works");
-
     const newPlayerLeads =
-      stripTimer(timers[1].children[2].innerText) >=
-      stripTimer(timers[0].children[2].innerText);
+      stripTimer(timers[1].innerText) >= stripTimer(timers[0].innerText);
     if (playerLeads != newPlayerLeads) {
       playerLeads = newPlayerLeads;
       switchBGcolor(newPlayerLeads);
-      console.log("switch");
     }
   }
 }, 50);
 
 const switchBGcolor = (ifPlayerleads) => {
   if (ifPlayerleads) {
-    console.log("inherit");
     board.style.backgroundColor = "inherit";
   } else {
-    console.log("red");
     board.style.backgroundColor = "red";
   }
 };
