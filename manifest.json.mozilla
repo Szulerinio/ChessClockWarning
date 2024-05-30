@@ -8,5 +8,11 @@
       "css": [],
       "js": ["content.js"]
     }
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{e55b9195-670b-4e93-aa8e-950fe8a2f84e}",
+      "strict_min_version": "42.0"
+    }
+  }
 }
