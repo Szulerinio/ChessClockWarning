@@ -3,8 +3,10 @@ let timers = [];
 let playerLeads = true;
 let board = null;
 const getTimers = window.setInterval(() => {
-  timers = document.querySelectorAll("span[data-cy=clock-time]");
+  timers = document.querySelectorAll(".clock-time-next-monospace");
   board = document.querySelector("#board-layout-main");
+  console.log(timers);
+  console.log(board);
 }, 10000);
 
 const stripTimer = (value) => {
